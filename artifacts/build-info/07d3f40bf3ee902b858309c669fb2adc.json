@@ -1,0 +1,330 @@
+{
+	"id": "07d3f40bf3ee902b858309c669fb2adc",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.18",
+	"solcLongVersion": "0.8.18+commit.87f61d96",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"finalToken.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.8.18;\r\n\r\n/*\r\n       REQUIREMENTS\r\n    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)\r\n    2. Your contract will have a mapping of addresses to balances (address => uint)\r\n    3. You will have a mint function that takes two parameters: an address and a value. \r\n       The function then increases the total supply by that number and increases the balance \r\n       of the “sender” address by that amount\r\n    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. \r\n       It will take an address and value just like the mint functions. It will then deduct the value from the total supply \r\n       and from the balance of the “sender”.\r\n    5. Lastly, your burn function should have conditionals to make sure the balance of \"sender\" is greater than or equal \r\n       to the amount that is supposed to be burned.\r\n*/\r\n\r\ncontract MyToken {\r\n\r\n    // public variables here\r\n\r\n    // mapping variable here\r\n\r\n    // mint function\r\n\r\n    // burn function\r\n\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"finalToken.sol": {
+				"MyToken": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"finalToken.sol\":1016:1151  contract MyToken {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"finalToken.sol\":1016:1151  contract MyToken {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa264697066735822122053b7164a7601177ce6ba9f5f5a1d81c980d092f3fbcce17712b1996a4b357ed064736f6c63430008120033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122053b7164a7601177ce6ba9f5f5a1d81c980d092f3fbcce17712b1996a4b357ed064736f6c63430008120033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MSTORE8 0xB7 AND 0x4A PUSH23 0x1177CE6BA9F5F5A1D81C980D092F3FBCCE17712B1996A 0x4B CALLDATALOAD PUSH31 0xD064736F6C6343000812003300000000000000000000000000000000000000 ",
+							"sourceMap": "1016:135:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea264697066735822122053b7164a7601177ce6ba9f5f5a1d81c980d092f3fbcce17712b1996a4b357ed064736f6c63430008120033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MSTORE8 0xB7 AND 0x4A PUSH23 0x1177CE6BA9F5F5A1D81C980D092F3FBCCE17712B1996A 0x4B CALLDATALOAD PUSH31 0xD064736F6C6343000812003300000000000000000000000000000000000000 ",
+							"sourceMap": "1016:135:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 1016,
+									"end": 1151,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a264697066735822122053b7164a7601177ce6ba9f5f5a1d81c980d092f3fbcce17712b1996a4b357ed064736f6c63430008120033",
+									".code": [
+										{
+											"begin": 1016,
+											"end": 1151,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 1016,
+											"end": 1151,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 1016,
+											"end": 1151,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 1016,
+											"end": 1151,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 1016,
+											"end": 1151,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 1016,
+											"end": 1151,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"finalToken.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"finalToken.sol\":\"MyToken\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"finalToken.sol\":{\"keccak256\":\"0x7c7110e3a0df16da8a442c8e8578f020e86bd9eec481147a231e529fa53babab\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://df6193457783b9b48821ad5dfe1095f745adf4fa88933c648330557eb47d7c30\",\"dweb:/ipfs/QmU4bZTuQ6dX9Qc1VqGTfEYywwkNKmyNb8Tmvjea9GrTKB\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"finalToken.sol": {
+				"ast": {
+					"absolutePath": "finalToken.sol",
+					"exportedSymbols": {
+						"MyToken": [
+							2
+						]
+					},
+					"id": 3,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".18"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "MyToken",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 2,
+							"linearizedBaseContracts": [
+								2
+							],
+							"name": "MyToken",
+							"nameLocation": "1025:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [],
+							"scope": 3,
+							"src": "1016:135:0",
+							"usedErrors": []
+						}
+					],
+					"src": "33:1120:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
