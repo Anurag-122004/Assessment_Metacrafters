@@ -21,7 +21,7 @@ contract AdminOnly {
     }
 
     // Example function that only the admin can call
-    function adminFunction() public onlyAdmin {
+    function adFunction() public onlyAdmin {
         // Admin-only logic here
     }
 
